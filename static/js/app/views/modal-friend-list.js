@@ -47,12 +47,12 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/modal-friend-list.ht
 
                         var languages = _.pluck(item['languages'], 'name');
 
-                        return _.contains(languages, "Korean") || _.contains(languages, "한글") || _.contains(languages, "한국어");
+                        return !(_.contains(languages, "Korean") || _.contains(languages, "한글") || _.contains(languages, "한국어"));
                     },
                     locale: function (item) {
                         if(! item['locale']) return true;
 
-                        return item['locale'] === "ko_KR";
+                        return item['locale'] !== "ko_KR";
                     },
                     hometown: function (item) {
                         if(! item['hometown']) return true;
