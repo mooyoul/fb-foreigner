@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>싸이월드 돌아보기</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE">
+    <meta name="description" content="page description.">
+    <meta name="author" content="author name">
+    <!-- Facebook Open Graph 관련 -->
+    <meta property="og:title" content="싸이월드 돌아보기">
+    <meta property="og:description" content="page description">
+    <meta property="og:site_name" content="싸이월드 돌아보기">
+    <meta property="og:url" content="http://debug.so/lab/cyworld-lookback"/>
+    <!-- 지금은 없는 로고 이미지 경로임 -->
+    <meta property="og:image" content="http://static.sitename.co.kr/images/logo.png">
+    <link rel="icon" href="/favicon.ico" type="image/gif">
+    <!-- Cross Browser 관련 HTML5 Tag 및 Styles Reset / 외부 CSS Framework / 폰트기반 Vector Icons-->
+    <link rel="stylesheet" href="static/css/common.min.css" type="text/css">
+    <!-- JS Framework (Modernizr / HTML5Shiv / jQuery / Bootstrap) -->
+    <script type="text/javascript" src="static/js/lib/require.js" data-main="static/js/main.js"></script>
+    <!-- 현재 페이지 스크립트. 추후 JS파일로 통합하여 인클루드 예정입니다 -->
+</head>
+
+<body>
+<!-- Login Modal -->
+<div class="modal fade" id="modal-friend-list" tabindex="-1" role="dialog" aria-labelledby="Friend List Modal" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">친구 목록</h4>
+            </div>
+            <div class="modal-body">
+                <h2><kbd>검색옵션</kbd></h2>
+                <ul class="list-group list-group-checkbox" id="filter-options">
+                    <li class="list-group-item">
+                        <label class="input-checkbox">
+                            <input type="checkbox" value="language">
+                            <span class="control placeholder"></span>
+                            사용언어: 한국어 포함하지 않음 (사용언어 정보없는경우 무시)
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <label class="input-checkbox">
+                            <input type="checkbox" value="locale">
+                            <span class="control placeholder"></span>
+                            로케일: ko_KR 이외 로케일 사용 (로케일 정보없을경우 무시)
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <label class="input-checkbox">
+                            <input type="checkbox" value="hometown">
+                            <span class="control placeholder"></span>
+                            출신지: 한글 포함하지 않음 (출신지 정보없을경우 무시)
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <label class="input-checkbox">
+                            <input type="checkbox" value="location">
+                            <span class="control placeholder"></span>
+                            거주지: 한글 포함하지 않음 (거주지 정보없을경우 무시)
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <label class="input-checkbox">
+                            <input type="checkbox" value="name">
+                            <span class="control placeholder"></span>
+                            이름: 한글 포함하지 않음
+                        </label>
+                    </li>
+                </ul>
+
+                <h2 id="friend-list-heading"><code>검색결과</code></h2>
+                <ul class="list-group" id="friend-list">
+                    <li class="list-group-item text-center">
+                        검색 옵션을 선택하세요.
+                    </li>
+                </ul>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- //Login Modal -->
+</body>
+</html>
